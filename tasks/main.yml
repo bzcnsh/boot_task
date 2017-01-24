@@ -1,0 +1,17 @@
+---
+# tasks file for boot_task
+
+- file:
+    path: "{{boot_task_dest_dir}}"
+    state: directory
+    mode: 0755
+
+- name: copy files to host
+  copy: src="{{item['src']}}" dest="{{boot_task_dest_dir}}/{{item['dest']}}"
+  with_items: "{{boot_task_src_files}}"
+
+- name: schedule tasks to run at boot via cron
+  cron:
+    name: "run task at boot"
+    special_time: reboot
+    job: "{{boot_task_command_text}}"

@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - boot_task
+    - { role: boot_task, boot_task_command_text: "echo something" }
+
+
+
