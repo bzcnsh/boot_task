@@ -33,7 +33,7 @@ script:
 
   # verify result
   - >
-    sudo crontab -l | grep -q "echo something"
+    sudo crontab -l | grep -q "^@reboot\s*echo something$"
     && (echo 'crontab entry validated: pass' && exit 0)
     || (echo 'crontab entry validated: fail' && exit 1)
 
