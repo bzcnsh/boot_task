@@ -1,4 +1,4 @@
 ---
 # defaults file for boot_task
-boot_task_dest_dir: /etc/boot_tasks
+boot_task_dest_dir: /etc/boot_task
 boot_task_src_files: []
