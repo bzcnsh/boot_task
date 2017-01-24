@@ -1,6 +1,6 @@
 galaxy_info:
-  author: your name
-  description: your description
+  author: bzcnsh
+  description: run job at startup via cron @reboot jobs
   company: your company (optional)
 
   # If the issue tracker for your role is not on github, uncomment the
@@ -14,7 +14,7 @@ galaxy_info:
   # - GPLv3
   # - Apache
   # - CC-BY
-  license: license (GPLv2, CC-BY, etc)
+  license: license (MIT)
 
   min_ansible_version: 1.2
 
@@ -160,8 +160,8 @@ galaxy_info:
   #  versions:
   #  - all
   #  - 5
-  #  - 6
-  #  - 7
+    - 6
+    - 7
   #- name: Windows
   #  versions:
   #  - all
