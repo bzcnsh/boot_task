@@ -1,7 +1,9 @@
 Role Name
-=========
+==========
 
-run a task at system start up, using root's crontab
+boot_task
+
+runs a task at system startup, by creating a @reboot crontab entry for root
 
 Requirements
 ------------
@@ -12,6 +14,7 @@ Role Variables
 --------------
 
 boot_task_src_files: files to be copied
+  default: []
 boot_task_dest_dir: target directory for copied files
   default: /etc/boot_task
 boot_task_command_text: command to be placed inside root's crontab
